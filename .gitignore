@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Expo Cache and Builds
+.expo/
+**/.expo/
+web-build/
+**/web-build/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+*.env
+**/.env
+**/*.env
+supabase/functions/**/.env
+
+# Local logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Supabase Local Temp Directory
+supabase/.temp/
