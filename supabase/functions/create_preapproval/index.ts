@@ -51,6 +51,7 @@ serve(async (req) => {
       valid_until,
       max_uses,
       notes,
+      guest_photo_url,
     } = body
 
     // Validate required fields
@@ -103,6 +104,7 @@ serve(async (req) => {
         valid_until,
         max_uses: max_uses ?? 1,
         notes: notes || null,
+        guest_photo_url: guest_photo_url || null,
       })
       .select()
       .single()
@@ -119,6 +121,7 @@ serve(async (req) => {
         valid_until: preapproval.valid_until,
         max_uses: preapproval.max_uses,
         status: preapproval.status,
+        guest_photo_url: preapproval.guest_photo_url,
       },
       message: `Share this passcode with your guest: ${passcode}`,
     }), {
